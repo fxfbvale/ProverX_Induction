@@ -11,7 +11,8 @@
 ; S is finite
 (declare-const n Int)
 (declare-const k Int)
-(assert (forall ((x S)) (=> (> k 0) (= (pot x (+ n k)) (pot x n)))))
+(assert (> k 0))
+(assert (forall ((x S)) (= (pot x (+ n k)) (pot x n))))
 
 ;(assert (exists ((n Int) (k Int)) (forall ((x S)) (= (pot x (+ n k)) (pot x n)))))
 
