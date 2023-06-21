@@ -9,15 +9,17 @@
 (assert (forall ((x S) (n Int)) (=> (>= n 0) (= (pot x (+ n 1)) (m (pot x n) x)))))
 
 ; S is finite
-;(declare-const n Int)
+(declare-const n Int)
 ;(declare-const k Int)
-;(assert (>= n 0))
+(assert (> n 0))
 ;(assert (> k 0))
 ;(assert (forall ((x S)) (= (pot x (+ n k)) (pot x n))))
 
 ;(assert (exists ((n Int) (k Int)) (forall ((x S)) (= (pot x (+ n k)) (pot x n)))))
 
-(assert (exists ((n Int) (k Int)) (forall ((x S)) (and (>= n 0) (and (> k 0) (= (pot x (+ n k)) (pot x n)))) )))
+;(assert (exists ((n Int) (k Int)) (forall ((x S)) (and (> n 0) (and (> k 0) (= (pot x (+ n k)) (pot x n)))) )))
+
+(assert (exists ((k Int)) (forall ((x S)) (and (> k 0) (= (pot x (+ n k)) (pot x n)))) ))
 
 
 
